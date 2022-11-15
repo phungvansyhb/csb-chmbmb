@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Static Template</title>
+  </head>
+  <body>
+    <button class="btn">Hover me</button>
+
+    <div class="square"></div>
+
+    <style>
+      @keyframes waveBg {
+        0% {
+          background: linear-gradient(
+            90deg,
+            rgba(34, 193, 195, 1) 0%,
+            rgba(253, 187, 45, 1) 100%
+          );
+        }
+        25% {
+          background: linear-gradient(
+            90deg,
+            rgba(34, 193, 195, 0.75) 0%,
+            rgba(253, 187, 45, 1) 100%
+          );
+        }
+        50% {
+          background: linear-gradient(
+            90deg,
+            rgba(34, 193, 195, 0.5) 0%,
+            rgba(253, 187, 45, 1) 100%
+          );
+        }
+        75% {
+          background: linear-gradient(
+            90deg,
+            rgba(34, 193, 195, 0.25) 0%,
+            rgba(253, 187, 45, 1) 100%
+          );
+        }
+        100% {
+          background: linear-gradient(
+            90deg,
+            rgba(34, 193, 195, 0) 0%,
+            rgba(253, 187, 45, 1) 100%
+          );
+        }
+      }
+      @keyframes jump {
+        0% {
+          bottom: 0px;
+        }
+        20% {
+          bottom: 500px;
+        }
+        40% {
+          bottom: 0px;
+        }
+        50% {
+          bottom: 350px;
+        }
+        60% {
+          bottom: 0px;
+        }
+        70% {
+          bottom: 300px;
+        }
+        75% {
+          bottom: 0px;
+        }
+        80% {
+          bottom: 200px;
+        }
+        83% {
+          bottom: 0px;
+        }
+        85% {
+          bottom: 100px;
+        }
+        90% {
+          bottom: 0px;
+        }
+        95% {
+          bottom: 50px;
+        }
+        100% {
+          bottom: 0px;
+        }
+      }
+
+      @keyframes jump2 {
+        from {
+          bottom: 0px;
+        }
+        to {
+          bottom: 500px;
+        }
+      }
+
+      .square {
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        width: 200px;
+        height: 200px;
+        background: yellowgreen;
+        animation-name: jump2;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        animation-direction: alternate;
+      }
+
+      .btn {
+        background: yellow;
+        padding: 10px 24px;
+        outline: none;
+        border: 1px solid lightgray;
+        border-radius: 8px;
+        cursor: pointer;
+      }
+      .btn:hover {
+        animation-name: waveBg;
+        animation-duration: 0.25s;
+      }
+    </style>
+  </body>
+</html>
